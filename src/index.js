@@ -60,14 +60,14 @@ function App() {
 function Pizza(props) {
     const {name, ingredients, price, photoName, soldOut} = props.data;
     return (
-        <div className="pizza">
-            <img src={photoName} alt="Pizza Spinaci"/>
+        <li className="pizza">
+            <img src={photoName} alt={name}/>
             <div>
                 <h3>{name}</h3>
                 <p>{ingredients}</p>
                 <span>{soldOut ? 'SOLD OUT' : `${price}`}</span>
             </div>
-        </div>
+        </li>
     )
 }
 
@@ -79,7 +79,10 @@ function Menu() {
     return (
         <main className="menu">
             <h2>Our Menu</h2>
-            {pizzaData.map((pizza, i) => <Pizza data={pizza} key={i}/>)}
+
+            <ul className="pizzas">
+                {pizzaData.map((pizza, i) => <Pizza data={pizza} key={i}/>)}
+            </ul>
         </main>
     )
 }
