@@ -60,12 +60,14 @@ function App() {
 function Pizza(props) {
     const {name, ingredients, price, photoName, soldOut} = props.data;
     return (
-        <>
+        <div className="pizza">
             <img src={photoName} alt="Pizza Spinaci"/>
-            <h3>{name}</h3>
-            <p>{ingredients}</p>
-            <p>{soldOut ? 'SOLD OUT' : `${price}`}</p>
-        </>
+            <div>
+                <h3>{name}</h3>
+                <p>{ingredients}</p>
+                <span>{soldOut ? 'SOLD OUT' : `${price}`}</span>
+            </div>
+        </div>
     )
 }
 
