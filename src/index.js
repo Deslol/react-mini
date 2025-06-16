@@ -60,7 +60,7 @@ function App() {
 function Pizza(props) {
     const {name, ingredients, price, photoName, soldOut} = props.data;
     return (
-        <li className="pizza">
+        <li className={soldOut ? "pizza sold-out" : "pizza"}>
             <img src={photoName} alt={name}/>
             <div>
                 <h3>{name}</h3>
