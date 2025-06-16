@@ -57,8 +57,8 @@ function App() {
     )
 }
 
-function Pizza(props) {
-    const {name, ingredients, price, photoName, soldOut} = props.data;
+function Pizza({data}) {
+    const {name, ingredients, price, photoName, soldOut} = data;
     return (
         <li className={soldOut ? "pizza sold-out" : "pizza"}>
             <img src={photoName} alt={name}/>
