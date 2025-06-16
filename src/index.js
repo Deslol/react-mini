@@ -93,9 +93,9 @@ function Footer() {
     const closeHour = 22;
     const isOpen = hour >= openHour && hour <= closeHour;
 
-    return <footer className="footer">We're Currently {isOpen ? "Open" : "Closed"}</footer>
+    return <footer className="footer">We're
+        Currently {isOpen ? `Open until ${closeHour}:00. Come visit us or order online.` : `We are happy to welcome you between ${openHour}:00 and ${closeHour}:00`}</footer>
 }
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
